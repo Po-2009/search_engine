@@ -1,0 +1,13 @@
+{
+  "config": {
+    "name": "SkillboxSearchEngine",
+    "version": "0.1",
+    "max_responses": 5
+  }, "files":[
+    "/Users/poladmagerramli/Desktop/file_1.txt",
+  "/Users/poladmagerramli/Desktop/file_2.txt",
+  "/Users/poladmagerramli/Desktop/file_3.txt",
+  "/Users/poladmagerramli/Desktop/file_4.txt"
+
+  ]
+}
