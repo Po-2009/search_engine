@@ -293,21 +293,11 @@ FETCHCONTENT_QUIET:BOOL=ON
 // for googletest
 FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
 
-//When not empty, overrides where to find pre-populated content
-// for nlohmann_json
-FETCHCONTENT_SOURCE_DIR_NLOHMANN_JSON:PATH=
-
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of googletest
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of nlohmann_json
-FETCHCONTENT_UPDATES_DISCONNECTED_NLOHMANN_JSON:BOOL=OFF
-
-//Git command line client
-GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
@@ -414,15 +404,6 @@ nlohmann_json_IS_TOP_LEVEL:STATIC=OFF
 nlohmann_json_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/nlohmann json
 
 //Value Computed by CMake
-project_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
-
-//Value Computed by CMake
-project_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-project_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine
-
-//Value Computed by CMake
 search_engine_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
 
 //Value Computed by CMake
@@ -445,9 +426,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/Users/poladmagerramli/CLionProjects/search_engine/
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=27
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=28
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=8
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake
 //Path to cpack program executable.
@@ -570,7 +551,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27
+CMAKE_ROOT:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -607,8 +588,6 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12][cfound components: Interpreter ][v3.12.0()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//ADVANCED property for variable: GIT_EXECUTABLE
-GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 JSON_BuildTests:INTERNAL=OFF
 NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=share/cmake/nlohmann_json
 //CMAKE_INSTALL_PREFIX during last run

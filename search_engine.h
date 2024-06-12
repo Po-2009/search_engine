@@ -72,6 +72,7 @@ public:
         }
         return all_requests;
     }
+
     void putAnswers(std::vector<std::vector<RelativeIndex>> answers){
         nlohmann::json json_file;
         std::ofstream answers_file1(PathToJsonFiles(PROJECT_BINARY_DIR) + "/answers.json");
