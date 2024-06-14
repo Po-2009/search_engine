@@ -202,8 +202,6 @@ public:
                 std::vector<RelativeIndex> document_relative_index;
                 std::vector<Entry> all_find;
 
-
-
                 std::set<int> set(documents_number.begin(), documents_number.end());
                 int find_summ =0;
                 for(int j : set){
@@ -240,7 +238,6 @@ public:
                 }
 
                 result.push_back(document_relative_index);
-
             }
         }
         return result;
