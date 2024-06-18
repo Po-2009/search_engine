@@ -17,6 +17,9 @@
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
+//Build the testing tree.
+BUILD_TESTING:BOOL=ON
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -31,7 +34,7 @@ CMAKE_BUILD_TYPE:STRING=Debug
 CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -49,7 +52,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -279,6 +282,22 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to the coverage program that CTest uses for performing coverage
+// inspection
+COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
+
+//Extra command line flags to pass to the coverage tool
+COVERAGE_EXTRA_FLAGS:STRING=-l
+
+//How many times to retry timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_COUNT:STRING=3
+
+//How long to wait between timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_DELAY:STRING=5
+
+//Maximum time allowed before CTest will kill the test.
+DART_TESTING_TIMEOUT:STRING=1500
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps
 
@@ -293,11 +312,18 @@ FETCHCONTENT_QUIET:BOOL=ON
 // for googletest
 FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
 
+//When not empty, overrides where to find pre-populated content
+// for test/googletest
+FETCHCONTENT_SOURCE_DIR_TEST/GOOGLETEST:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of googletest
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of test/googletest
+FETCHCONTENT_UPDATES_DISCONNECTED_TEST/GOOGLETEST:BOOL=OFF
 
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
@@ -330,6 +356,27 @@ JSON_MultipleHeaders:BOOL=ON
 //Include as system headers (skip for clang-tidy).
 JSON_SystemInclude:BOOL=OFF
 
+//Command to build the project
+MAKECOMMAND:STRING=/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+
+//Path to the memory checking command, used for memory error detection.
+MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
+
+//File that contains suppressions for the memory checker
+MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
+
+//Value Computed by CMake
+MyProject_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test
+
+//Value Computed by CMake
+MyProject_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+MyProject_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/test
+
+//Name of the computer/site where compile is being run
+SITE:STRING=Polad-MacBook-Pro.local
+
 //Value Computed by CMake
 TestProject_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test
 
@@ -340,7 +387,7 @@ TestProject_IS_TOP_LEVEL:STATIC=OFF
 TestProject_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/test
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googlemock
+gmock_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googlemock
 
 //Value Computed by CMake
 gmock_IS_TOP_LEVEL:STATIC=OFF
@@ -349,7 +396,7 @@ gmock_IS_TOP_LEVEL:STATIC=OFF
 gmock_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googlemock
+gmock_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
@@ -358,22 +405,22 @@ gmock_build_tests:BOOL=OFF
 gmock_main_LIB_DEPENDS:STATIC=general;gmock;
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build
+googletest-distribution_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest
 
 //Value Computed by CMake
 googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src
+googletest-distribution_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/test/googletest
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest
+gtest_BINARY_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest
 
 //Value Computed by CMake
 gtest_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest
+gtest_SOURCE_DIR:STATIC=/Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -433,6 +480,8 @@ CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cpack
+//ADVANCED property for variable: CMAKE_CTEST_COMMAND
+CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -461,6 +510,8 @@ CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
+//Path to cache edit program executable.
+CMAKE_EDIT_COMMAND:INTERNAL=/opt/homebrew/Cellar/cmake/3.29.5/bin/ccmake
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=MACHO
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
@@ -584,12 +635,30 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_COMMAND
+COVERAGE_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
+COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
+CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
+CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DART_TESTING_TIMEOUT
+DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12][cfound components: Interpreter ][v3.12.0()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 JSON_BuildTests:INTERNAL=OFF
+//ADVANCED property for variable: MAKECOMMAND
+MAKECOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_COMMAND
+MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
+MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=share/cmake/nlohmann_json
+//ADVANCED property for variable: SITE
+SITE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 //Compiler reason failure
@@ -603,7 +672,8 @@ _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;0;64;32;;cpython-312-darwin;
 _Python_INTERPRETER_SIGNATURE:INTERNAL=f2cd4a4ff351fd9423fc3d6272d3bb69
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
-generated_dir:INTERNAL=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest/generated
+cmake_package_name:INTERNAL=GTest
+generated_dir:INTERNAL=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: gtest_build_samples

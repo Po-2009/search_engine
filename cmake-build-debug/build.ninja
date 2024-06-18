@@ -56,8 +56,6 @@ build CMakeFiles/search_engine.dir/main.cpp.o: CXX_COMPILER__search_engine_unsca
   INCLUDES = -I"/Users/poladmagerramli/CLionProjects/search_engine/nlohmann json/include"
   OBJECT_DIR = CMakeFiles/search_engine.dir
   OBJECT_FILE_DIR = CMakeFiles/search_engine.dir
-  TARGET_COMPILE_PDB = CMakeFiles/search_engine.dir/
-  TARGET_PDB = search_engine.pdb
 
 
 # =============================================================================
@@ -72,9 +70,8 @@ build search_engine: CXX_EXECUTABLE_LINKER__search_engine_Debug CMakeFiles/searc
   OBJECT_DIR = CMakeFiles/search_engine.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/search_engine.dir/
   TARGET_FILE = search_engine
-  TARGET_PDB = search_engine.pdb
+  TARGET_PDB = search_engine.dbg
 
 
 #############################################
@@ -93,8 +90,9 @@ build test: phony CMakeFiles/test.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug && /opt/homebrew/Cellar/cmake/3.29.5/bin/ccmake -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -162,396 +160,6 @@ build install/strip: phony CMakeFiles/install/strip.util
 #############################################
 # Utility command for test
 
-build _deps/googletest-build/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
-  DESC = Running tests...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/test: phony _deps/googletest-build/CMakeFiles/test.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build _deps/googletest-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build _deps/googletest-build/edit_cache: phony _deps/googletest-build/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build _deps/googletest-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/rebuild_cache: phony _deps/googletest-build/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build _deps/googletest-build/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build _deps/googletest-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/install: phony _deps/googletest-build/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build _deps/googletest-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/install/local: phony _deps/googletest-build/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build _deps/googletest-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/install/strip: phony _deps/googletest-build/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target gmock
-
-
-#############################################
-# Order-only phony target for gmock
-
-build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
-
-build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_Debug /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
-  DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
-  FLAGS = -g -std=c++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
-  INCLUDES = -I/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googlemock/include -I/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest
-  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
-  OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src
-  TARGET_COMPILE_PDB = bin/libgmockd.pdb
-  TARGET_PDB = bin/libgmockd.pdb
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target gmock
-
-
-#############################################
-# Link the static library lib/libgmockd.a
-
-build lib/libgmockd.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtestd.a
-  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_COMPILE_PDB = bin/libgmockd.pdb
-  TARGET_FILE = lib/libgmockd.a
-  TARGET_PDB = bin/libgmockd.pdb
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target gmock_main
-
-
-#############################################
-# Order-only phony target for gmock_main
-
-build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
-
-build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_Debug /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
-  DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
-  FLAGS = -g -std=c++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
-  INCLUDES = -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest
-  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
-  OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src
-  TARGET_COMPILE_PDB = bin/libgmock_maind.pdb
-  TARGET_PDB = bin/libgmock_maind.pdb
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target gmock_main
-
-
-#############################################
-# Link the static library lib/libgmock_maind.a
-
-build lib/libgmock_maind.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmockd.a lib/libgtestd.a
-  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_COMPILE_PDB = bin/libgmock_maind.pdb
-  TARGET_FILE = lib/libgmock_maind.a
-  TARGET_PDB = bin/libgmock_maind.pdb
-
-
-#############################################
-# Utility command for test
-
-build _deps/googletest-build/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
-  DESC = Running tests...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googlemock/test: phony _deps/googletest-build/googlemock/CMakeFiles/test.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build _deps/googletest-build/googlemock/edit_cache: phony _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googlemock/rebuild_cache: phony _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build _deps/googletest-build/googlemock/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build _deps/googletest-build/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googlemock/install: phony _deps/googletest-build/googlemock/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build _deps/googletest-build/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googlemock/install/local: phony _deps/googletest-build/googlemock/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build _deps/googletest-build/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googlemock/install/strip: phony _deps/googletest-build/googlemock/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googlemock/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target gtest
-
-
-#############################################
-# Order-only phony target for gtest
-
-build cmake_object_order_depends_target_gtest: phony || _deps/googletest-build/googletest/CMakeFiles/gtest.dir
-
-build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_Debug /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
-  DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
-  FLAGS = -g -std=c++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
-  INCLUDES = -I/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include -I/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest
-  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
-  OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src
-  TARGET_COMPILE_PDB = bin/libgtestd.pdb
-  TARGET_PDB = bin/libgtestd.pdb
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target gtest
-
-
-#############################################
-# Link the static library lib/libgtestd.a
-
-build lib/libgtestd.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_COMPILE_PDB = bin/libgtestd.pdb
-  TARGET_FILE = lib/libgtestd.a
-  TARGET_PDB = bin/libgtestd.pdb
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target gtest_main
-
-
-#############################################
-# Order-only phony target for gtest_main
-
-build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
-
-build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_Debug /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
-  DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
-  FLAGS = -g -std=c++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls
-  INCLUDES = -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest
-  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
-  OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src
-  TARGET_COMPILE_PDB = bin/libgtest_maind.pdb
-  TARGET_PDB = bin/libgtest_maind.pdb
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target gtest_main
-
-
-#############################################
-# Link the static library lib/libgtest_maind.a
-
-build lib/libgtest_maind.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtestd.a
-  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_COMPILE_PDB = bin/libgtest_maind.pdb
-  TARGET_FILE = lib/libgtest_maind.a
-  TARGET_PDB = bin/libgtest_maind.pdb
-
-
-#############################################
-# Utility command for test
-
-build _deps/googletest-build/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
-  DESC = Running tests...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googletest/test: phony _deps/googletest-build/googletest/CMakeFiles/test.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build _deps/googletest-build/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build _deps/googletest-build/googletest/edit_cache: phony _deps/googletest-build/googletest/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googletest/rebuild_cache: phony _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build _deps/googletest-build/googletest/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build _deps/googletest-build/googletest/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googletest/install: phony _deps/googletest-build/googletest/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build _deps/googletest-build/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googletest/install/local: phony _deps/googletest-build/googletest/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build _deps/googletest-build/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-build/googletest/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /Users/poladmagerramli/CLionProjects/search_engine/CMakeLists.txt
-# =============================================================================
-
-
-#############################################
-# Utility command for test
-
 build nlohmann$ json/CMakeFiles/test.util: CUSTOM_COMMAND
   COMMAND = cd "/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/nlohmann json" && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
   DESC = Running tests...
@@ -565,8 +173,9 @@ build nlohmann$ json/test: phony nlohmann$ json/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build nlohmann$ json/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/nlohmann json" && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd "/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/nlohmann json" && /opt/homebrew/Cellar/cmake/3.29.5/bin/ccmake -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build nlohmann$ json/edit_cache: phony nlohmann$ json/CMakeFiles/edit_cache.util
@@ -643,11 +252,9 @@ build test/CMakeFiles/all_tests.dir/all_tests.cpp.o: CXX_COMPILER__all_tests_uns
   DEFINES = -DEXECUTABLE_NAME=\"search_engine\" -DPROJECT_BINARY_DIR=\"/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug\"
   DEP_FILE = test/CMakeFiles/all_tests.dir/all_tests.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
-  INCLUDES = -I"/Users/poladmagerramli/CLionProjects/search_engine/nlohmann json/include" -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-src/googletest
+  INCLUDES = -I/Users/poladmagerramli/CLionProjects/search_engine/test -I"/Users/poladmagerramli/CLionProjects/search_engine/nlohmann json/include" -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest
   OBJECT_DIR = test/CMakeFiles/all_tests.dir
   OBJECT_FILE_DIR = test/CMakeFiles/all_tests.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/all_tests.dir/
-  TARGET_PDB = test/all_tests.pdb
 
 
 # =============================================================================
@@ -657,16 +264,182 @@ build test/CMakeFiles/all_tests.dir/all_tests.cpp.o: CXX_COMPILER__all_tests_uns
 #############################################
 # Link the executable test/all_tests
 
-build test/all_tests test/all_tests[1]_tests.cmake | ${cmake_ninja_workdir}test/all_tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__all_tests_Debug test/CMakeFiles/all_tests.dir/all_tests.cpp.o | lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a || lib/libgtest_maind.a lib/libgtestd.a
+build test/all_tests: CXX_EXECUTABLE_LINKER__all_tests_Debug test/CMakeFiles/all_tests.dir/all_tests.cpp.o | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
-  LINK_LIBRARIES = lib/libgtestd.a  lib/libgtest_maind.a  lib/libgtestd.a
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a
   OBJECT_DIR = test/CMakeFiles/all_tests.dir
-  POST_BUILD = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -D TEST_TARGET=all_tests -D TEST_EXECUTABLE=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/all_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=all_tests_TESTS -D CTEST_FILE=/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/all_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = :
   PRE_LINK = :
-  RESTAT = 1
-  TARGET_COMPILE_PDB = test/CMakeFiles/all_tests.dir/
   TARGET_FILE = test/all_tests
-  TARGET_PDB = test/all_tests.pdb
+  TARGET_PDB = all_tests.dbg
+
+
+#############################################
+# Utility command for Experimental
+
+build test/Experimental: phony test/CMakeFiles/Experimental
+
+
+#############################################
+# Utility command for Nightly
+
+build test/Nightly: phony test/CMakeFiles/Nightly
+
+
+#############################################
+# Utility command for Continuous
+
+build test/Continuous: phony test/CMakeFiles/Continuous
+
+
+#############################################
+# Utility command for NightlyMemoryCheck
+
+build test/NightlyMemoryCheck: phony test/CMakeFiles/NightlyMemoryCheck
+
+
+#############################################
+# Utility command for NightlyStart
+
+build test/NightlyStart: phony test/CMakeFiles/NightlyStart
+
+
+#############################################
+# Utility command for NightlyUpdate
+
+build test/NightlyUpdate: phony test/CMakeFiles/NightlyUpdate
+
+
+#############################################
+# Utility command for NightlyConfigure
+
+build test/NightlyConfigure: phony test/CMakeFiles/NightlyConfigure
+
+
+#############################################
+# Utility command for NightlyBuild
+
+build test/NightlyBuild: phony test/CMakeFiles/NightlyBuild
+
+
+#############################################
+# Utility command for NightlyTest
+
+build test/NightlyTest: phony test/CMakeFiles/NightlyTest
+
+
+#############################################
+# Utility command for NightlyCoverage
+
+build test/NightlyCoverage: phony test/CMakeFiles/NightlyCoverage
+
+
+#############################################
+# Utility command for NightlyMemCheck
+
+build test/NightlyMemCheck: phony test/CMakeFiles/NightlyMemCheck
+
+
+#############################################
+# Utility command for NightlySubmit
+
+build test/NightlySubmit: phony test/CMakeFiles/NightlySubmit
+
+
+#############################################
+# Utility command for ExperimentalStart
+
+build test/ExperimentalStart: phony test/CMakeFiles/ExperimentalStart
+
+
+#############################################
+# Utility command for ExperimentalUpdate
+
+build test/ExperimentalUpdate: phony test/CMakeFiles/ExperimentalUpdate
+
+
+#############################################
+# Utility command for ExperimentalConfigure
+
+build test/ExperimentalConfigure: phony test/CMakeFiles/ExperimentalConfigure
+
+
+#############################################
+# Utility command for ExperimentalBuild
+
+build test/ExperimentalBuild: phony test/CMakeFiles/ExperimentalBuild
+
+
+#############################################
+# Utility command for ExperimentalTest
+
+build test/ExperimentalTest: phony test/CMakeFiles/ExperimentalTest
+
+
+#############################################
+# Utility command for ExperimentalCoverage
+
+build test/ExperimentalCoverage: phony test/CMakeFiles/ExperimentalCoverage
+
+
+#############################################
+# Utility command for ExperimentalMemCheck
+
+build test/ExperimentalMemCheck: phony test/CMakeFiles/ExperimentalMemCheck
+
+
+#############################################
+# Utility command for ExperimentalSubmit
+
+build test/ExperimentalSubmit: phony test/CMakeFiles/ExperimentalSubmit
+
+
+#############################################
+# Utility command for ContinuousStart
+
+build test/ContinuousStart: phony test/CMakeFiles/ContinuousStart
+
+
+#############################################
+# Utility command for ContinuousUpdate
+
+build test/ContinuousUpdate: phony test/CMakeFiles/ContinuousUpdate
+
+
+#############################################
+# Utility command for ContinuousConfigure
+
+build test/ContinuousConfigure: phony test/CMakeFiles/ContinuousConfigure
+
+
+#############################################
+# Utility command for ContinuousBuild
+
+build test/ContinuousBuild: phony test/CMakeFiles/ContinuousBuild
+
+
+#############################################
+# Utility command for ContinuousTest
+
+build test/ContinuousTest: phony test/CMakeFiles/ContinuousTest
+
+
+#############################################
+# Utility command for ContinuousCoverage
+
+build test/ContinuousCoverage: phony test/CMakeFiles/ContinuousCoverage
+
+
+#############################################
+# Utility command for ContinuousMemCheck
+
+build test/ContinuousMemCheck: phony test/CMakeFiles/ContinuousMemCheck
+
+
+#############################################
+# Utility command for ContinuousSubmit
+
+build test/ContinuousSubmit: phony test/CMakeFiles/ContinuousSubmit
 
 
 #############################################
@@ -685,8 +458,9 @@ build test/test: phony test/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /opt/homebrew/Cellar/cmake/3.29.5/bin/ccmake -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build test/edit_cache: phony test/CMakeFiles/edit_cache.util
@@ -745,26 +519,691 @@ build test/CMakeFiles/install/strip.util: CUSTOM_COMMAND test/all
 
 build test/install/strip: phony test/CMakeFiles/install/strip.util
 
+
+#############################################
+# Custom command for test/CMakeFiles/Experimental
+
+build test/CMakeFiles/Experimental | ${cmake_ninja_workdir}test/CMakeFiles/Experimental: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D Experimental
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/Nightly
+
+build test/CMakeFiles/Nightly | ${cmake_ninja_workdir}test/CMakeFiles/Nightly: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D Nightly
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/Continuous
+
+build test/CMakeFiles/Continuous | ${cmake_ninja_workdir}test/CMakeFiles/Continuous: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D Continuous
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlyMemoryCheck
+
+build test/CMakeFiles/NightlyMemoryCheck | ${cmake_ninja_workdir}test/CMakeFiles/NightlyMemoryCheck: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyMemoryCheck
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlyStart
+
+build test/CMakeFiles/NightlyStart | ${cmake_ninja_workdir}test/CMakeFiles/NightlyStart: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyStart
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlyUpdate
+
+build test/CMakeFiles/NightlyUpdate | ${cmake_ninja_workdir}test/CMakeFiles/NightlyUpdate: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyUpdate
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlyConfigure
+
+build test/CMakeFiles/NightlyConfigure | ${cmake_ninja_workdir}test/CMakeFiles/NightlyConfigure: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyConfigure
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlyBuild
+
+build test/CMakeFiles/NightlyBuild | ${cmake_ninja_workdir}test/CMakeFiles/NightlyBuild: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyBuild
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlyTest
+
+build test/CMakeFiles/NightlyTest | ${cmake_ninja_workdir}test/CMakeFiles/NightlyTest: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyTest
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlyCoverage
+
+build test/CMakeFiles/NightlyCoverage | ${cmake_ninja_workdir}test/CMakeFiles/NightlyCoverage: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyCoverage
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlyMemCheck
+
+build test/CMakeFiles/NightlyMemCheck | ${cmake_ninja_workdir}test/CMakeFiles/NightlyMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlyMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/NightlySubmit
+
+build test/CMakeFiles/NightlySubmit | ${cmake_ninja_workdir}test/CMakeFiles/NightlySubmit: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D NightlySubmit
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ExperimentalStart
+
+build test/CMakeFiles/ExperimentalStart | ${cmake_ninja_workdir}test/CMakeFiles/ExperimentalStart: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalStart
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ExperimentalUpdate
+
+build test/CMakeFiles/ExperimentalUpdate | ${cmake_ninja_workdir}test/CMakeFiles/ExperimentalUpdate: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalUpdate
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ExperimentalConfigure
+
+build test/CMakeFiles/ExperimentalConfigure | ${cmake_ninja_workdir}test/CMakeFiles/ExperimentalConfigure: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalConfigure
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ExperimentalBuild
+
+build test/CMakeFiles/ExperimentalBuild | ${cmake_ninja_workdir}test/CMakeFiles/ExperimentalBuild: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalBuild
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ExperimentalTest
+
+build test/CMakeFiles/ExperimentalTest | ${cmake_ninja_workdir}test/CMakeFiles/ExperimentalTest: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalTest
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ExperimentalCoverage
+
+build test/CMakeFiles/ExperimentalCoverage | ${cmake_ninja_workdir}test/CMakeFiles/ExperimentalCoverage: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalCoverage
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ExperimentalMemCheck
+
+build test/CMakeFiles/ExperimentalMemCheck | ${cmake_ninja_workdir}test/CMakeFiles/ExperimentalMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ExperimentalSubmit
+
+build test/CMakeFiles/ExperimentalSubmit | ${cmake_ninja_workdir}test/CMakeFiles/ExperimentalSubmit: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ExperimentalSubmit
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ContinuousStart
+
+build test/CMakeFiles/ContinuousStart | ${cmake_ninja_workdir}test/CMakeFiles/ContinuousStart: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousStart
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ContinuousUpdate
+
+build test/CMakeFiles/ContinuousUpdate | ${cmake_ninja_workdir}test/CMakeFiles/ContinuousUpdate: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousUpdate
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ContinuousConfigure
+
+build test/CMakeFiles/ContinuousConfigure | ${cmake_ninja_workdir}test/CMakeFiles/ContinuousConfigure: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousConfigure
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ContinuousBuild
+
+build test/CMakeFiles/ContinuousBuild | ${cmake_ninja_workdir}test/CMakeFiles/ContinuousBuild: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousBuild
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ContinuousTest
+
+build test/CMakeFiles/ContinuousTest | ${cmake_ninja_workdir}test/CMakeFiles/ContinuousTest: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousTest
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ContinuousCoverage
+
+build test/CMakeFiles/ContinuousCoverage | ${cmake_ninja_workdir}test/CMakeFiles/ContinuousCoverage: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousCoverage
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ContinuousMemCheck
+
+build test/CMakeFiles/ContinuousMemCheck | ${cmake_ninja_workdir}test/CMakeFiles/ContinuousMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousMemCheck
+  pool = console
+
+
+#############################################
+# Custom command for test/CMakeFiles/ContinuousSubmit
+
+build test/CMakeFiles/ContinuousSubmit | ${cmake_ninja_workdir}test/CMakeFiles/ContinuousSubmit: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest -D ContinuousSubmit
+  pool = console
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/poladmagerramli/CLionProjects/search_engine/test/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for test
+
+build test/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test/googletest/test: phony test/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build test/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest && /opt/homebrew/Cellar/cmake/3.29.5/bin/ccmake -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build test/googletest/edit_cache: phony test/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test/googletest/rebuild_cache: phony test/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build test/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build test/googletest/CMakeFiles/install.util: CUSTOM_COMMAND test/googletest/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build test/googletest/install: phony test/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build test/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND test/googletest/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build test/googletest/install/local: phony test/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build test/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND test/googletest/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build test/googletest/install/strip: phony test/googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_Debug /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEFINES = -DEXECUTABLE_NAME=\"search_engine\" -DPROJECT_BINARY_DIR=\"/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug\"
+  DEP_FILE = test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+  FLAGS = -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/include -I/Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest
+  OBJECT_DIR = test/googletest/googlemock/CMakeFiles/gmock.dir
+  OBJECT_FILE_DIR = test/googletest/googlemock/CMakeFiles/gmock.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib/libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug test/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtest.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = test/googletest/googlemock/CMakeFiles/gmock.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build test/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_Debug /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEFINES = -DEXECUTABLE_NAME=\"search_engine\" -DPROJECT_BINARY_DIR=\"/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug\"
+  DEP_FILE = test/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+  FLAGS = -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest
+  OBJECT_DIR = test/googletest/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_FILE_DIR = test/googletest/googlemock/CMakeFiles/gmock_main.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib/libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug test/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmock.a lib/libgtest.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = test/googletest/googlemock/CMakeFiles/gmock_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build test/googletest/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test/googletest/googlemock/test: phony test/googletest/googlemock/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build test/googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googlemock && /opt/homebrew/Cellar/cmake/3.29.5/bin/ccmake -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build test/googletest/googlemock/edit_cache: phony test/googletest/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test/googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test/googletest/googlemock/rebuild_cache: phony test/googletest/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build test/googletest/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build test/googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND test/googletest/googlemock/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build test/googletest/googlemock/install: phony test/googletest/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build test/googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND test/googletest/googlemock/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build test/googletest/googlemock/install/local: phony test/googletest/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build test/googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND test/googletest/googlemock/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build test/googletest/googlemock/install/strip: phony test/googletest/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || test/googletest/googletest/CMakeFiles/gtest.dir
+
+build test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_Debug /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEFINES = -DEXECUTABLE_NAME=\"search_engine\" -DPROJECT_BINARY_DIR=\"/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug\"
+  DEP_FILE = test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+  FLAGS = -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/include -I/Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest
+  OBJECT_DIR = test/googletest/googletest/CMakeFiles/gtest.dir
+  OBJECT_FILE_DIR = test/googletest/googletest/CMakeFiles/gtest.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib/libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug test/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = test/googletest/googletest/CMakeFiles/gtest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build test/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_Debug /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEFINES = -DEXECUTABLE_NAME=\"search_engine\" -DPROJECT_BINARY_DIR=\"/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug\"
+  DEP_FILE = test/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+  FLAGS = -g -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics  -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/include -isystem /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest
+  OBJECT_DIR = test/googletest/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_FILE_DIR = test/googletest/googletest/CMakeFiles/gtest_main.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib/libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug test/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtest.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = test/googletest/googletest/CMakeFiles/gtest_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build test/googletest/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test/googletest/googletest/test: phony test/googletest/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build test/googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest && /opt/homebrew/Cellar/cmake/3.29.5/bin/ccmake -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build test/googletest/googletest/edit_cache: phony test/googletest/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test/googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/poladmagerramli/CLionProjects/search_engine -B/Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test/googletest/googletest/rebuild_cache: phony test/googletest/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build test/googletest/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build test/googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND test/googletest/googletest/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build test/googletest/googletest/install: phony test/googletest/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build test/googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND test/googletest/googletest/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build test/googletest/googletest/install/local: phony test/googletest/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build test/googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND test/googletest/googletest/all
+  COMMAND = cd /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build test/googletest/googletest/install/strip: phony test/googletest/googletest/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
+build Continuous: phony test/Continuous
+
+build ContinuousBuild: phony test/ContinuousBuild
+
+build ContinuousConfigure: phony test/ContinuousConfigure
+
+build ContinuousCoverage: phony test/ContinuousCoverage
+
+build ContinuousMemCheck: phony test/ContinuousMemCheck
+
+build ContinuousStart: phony test/ContinuousStart
+
+build ContinuousSubmit: phony test/ContinuousSubmit
+
+build ContinuousTest: phony test/ContinuousTest
+
+build ContinuousUpdate: phony test/ContinuousUpdate
+
+build Experimental: phony test/Experimental
+
+build ExperimentalBuild: phony test/ExperimentalBuild
+
+build ExperimentalConfigure: phony test/ExperimentalConfigure
+
+build ExperimentalCoverage: phony test/ExperimentalCoverage
+
+build ExperimentalMemCheck: phony test/ExperimentalMemCheck
+
+build ExperimentalStart: phony test/ExperimentalStart
+
+build ExperimentalSubmit: phony test/ExperimentalSubmit
+
+build ExperimentalTest: phony test/ExperimentalTest
+
+build ExperimentalUpdate: phony test/ExperimentalUpdate
+
+build Nightly: phony test/Nightly
+
+build NightlyBuild: phony test/NightlyBuild
+
+build NightlyConfigure: phony test/NightlyConfigure
+
+build NightlyCoverage: phony test/NightlyCoverage
+
+build NightlyMemCheck: phony test/NightlyMemCheck
+
+build NightlyMemoryCheck: phony test/NightlyMemoryCheck
+
+build NightlyStart: phony test/NightlyStart
+
+build NightlySubmit: phony test/NightlySubmit
+
+build NightlyTest: phony test/NightlyTest
+
+build NightlyUpdate: phony test/NightlyUpdate
+
 build all_tests: phony test/all_tests
 
-build gmock: phony lib/libgmockd.a
+build gmock: phony lib/libgmock.a
 
-build gmock_main: phony lib/libgmock_maind.a
+build gmock_main: phony lib/libgmock_main.a
 
-build gtest: phony lib/libgtestd.a
+build gtest: phony lib/libgtest.a
 
-build gtest_main: phony lib/libgtest_maind.a
+build gtest_main: phony lib/libgtest_main.a
 
-build libgmock_maind.a: phony lib/libgmock_maind.a
+build libgmock.a: phony lib/libgmock.a
 
-build libgmockd.a: phony lib/libgmockd.a
+build libgmock_main.a: phony lib/libgmock_main.a
 
-build libgtest_maind.a: phony lib/libgtest_maind.a
+build libgtest.a: phony lib/libgtest.a
 
-build libgtestd.a: phony lib/libgtestd.a
+build libgtest_main.a: phony lib/libgtest_main.a
 
 # =============================================================================
 # Folder targets.
@@ -774,28 +1213,7 @@ build libgtestd.a: phony lib/libgtestd.a
 #############################################
 # Folder: /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug
 
-build all: phony search_engine _deps/googletest-build/all nlohmann$ json/all test/all
-
-# =============================================================================
-
-#############################################
-# Folder: /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build
-
-build _deps/googletest-build/all: phony _deps/googletest-build/googlemock/all
-
-# =============================================================================
-
-#############################################
-# Folder: /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googlemock
-
-build _deps/googletest-build/googlemock/all: phony lib/libgmockd.a lib/libgmock_maind.a _deps/googletest-build/googletest/all
-
-# =============================================================================
-
-#############################################
-# Folder: /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/_deps/googletest-build/googletest
-
-build _deps/googletest-build/googletest/all: phony lib/libgtestd.a lib/libgtest_maind.a
+build all: phony search_engine nlohmann$ json/all test/all
 
 # =============================================================================
 
@@ -809,7 +1227,28 @@ build nlohmann$ json/all: phony
 #############################################
 # Folder: /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test
 
-build test/all: phony test/all_tests
+build test/all: phony test/all_tests test/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest
+
+build test/googletest/all: phony test/googletest/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googlemock
+
+build test/googletest/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a test/googletest/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/poladmagerramli/CLionProjects/search_engine/cmake-build-debug/test/googletest/googletest
+
+build test/googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 # Built-in targets
@@ -818,14 +1257,14 @@ build test/all: phony test/all_tests
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ExternalProject.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/GoogleTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /Users/poladmagerramli/CLionProjects/search_engine/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/config.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/nlohmann_jsonConfigVersion.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/pkg-config.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTestTargets.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTestUseLaunchers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/DartConfiguration.tcl.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ExternalProject.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /Users/poladmagerramli/CLionProjects/search_engine/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/config.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/nlohmann_jsonConfigVersion.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/pkg-config.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/cmake/gmock.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/cmake/gmock_main.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/cmake/Config.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/cmake/gtest.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/cmake/gtest_main.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ExternalProject.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/GoogleTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /Users/poladmagerramli/CLionProjects/search_engine/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/config.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/nlohmann_jsonConfigVersion.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/pkg-config.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTestTargets.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CTestUseLaunchers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/DartConfiguration.tcl.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ExternalProject.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /Users/poladmagerramli/CLionProjects/search_engine/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/config.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/nlohmann_jsonConfigVersion.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/nlohmann$ json/cmake/pkg-config.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/cmake/gmock.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googlemock/cmake/gmock_main.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/CMakeLists.txt /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/cmake/Config.cmake.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/cmake/gtest.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/cmake/gtest_main.pc.in /Users/poladmagerramli/CLionProjects/search_engine/test/googletest/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################
