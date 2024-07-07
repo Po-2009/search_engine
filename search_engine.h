@@ -233,7 +233,7 @@ public:
                     return a_1.rank > a_2.rank;
                 });
 
-                if (document_relative_index.size() > 6){
+                if (document_relative_index.size() > max_responses){
                     document_relative_index.erase(document_relative_index.begin()+5, document_relative_index.end());
                 }
 
