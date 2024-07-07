@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
-#include "../search_engine.h"
+#include "../include/SearchServer.h"
+#include "../include/JsonConverter.h"
+#include "../include/InvertedIndex.h"
 #include "gtest/gtest.h"
 
 using namespace std;
@@ -29,7 +31,7 @@ void TestInvertedIndexFunctionality(
     ASSERT_EQ(result, expected);
 }
 
-TEST(TestCaseInvertedIndex, TestBasic) {
+TEST(TestCaseInvertedIndex, TestBasic)  {
 
 const vector<string> docs = {
 
