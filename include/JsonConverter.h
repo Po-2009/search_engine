@@ -12,7 +12,7 @@ static std::string PathToJsonFiles(std::string &build_dir_path){
     std::filesystem::path path = build_dir_path;
     while(true){
         if(path.filename().string() == EXECUTABLE_NAME){
-            config_path = path.string();
+            config_path = path.string() + "/JsonFiles";
             return config_path;
         }
         path = path.parent_path();
