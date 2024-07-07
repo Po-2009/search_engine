@@ -11,7 +11,7 @@
 
 
 
-static std::string PathToJsonFiles(std::string build_dir_path){
+static std::string PathToJsonFiles(std::string &build_dir_path){
     std::string config_path;
     std::filesystem::path path = build_dir_path;
     while(true){
@@ -37,7 +37,8 @@ public:
 
     static std::vector<std::string> GetTextDocuments() {
         nlohmann::json config_info;
-        std::ifstream config_file(PathToJsonFiles(PROJECT_BINARY_DIR) + "/config.json");
+        std::string binary_dir = PROJECT_BINARY_DIR;
+        std::ifstream config_file(PathToJsonFiles(binary_dir) + "/config.json");
         config_file >> config_info;
         std::vector<std::string> all_values;
         for (std::string i : config_info["files"]) {
@@ -55,7 +56,8 @@ public:
     }
 
     static int GetResponsesLimit(){
-        std::ifstream config_file(PathToJsonFiles(PROJECT_BINARY_DIR) + "/config.json");
+        std::string binary_dir = PROJECT_BINARY_DIR;
+        std::ifstream config_file(PathToJsonFiles(binary_dir) + "/config.json");
         nlohmann::json config_info;
         config_file >> config_info;
         int max_responses = config_info["config"]["max_responses"];
@@ -63,7 +65,8 @@ public:
     }
 
     static std::vector<std::string> GetRequests(){
-        std::ifstream request_file(PathToJsonFiles(PROJECT_BINARY_DIR) + "/requests.json");
+        std::string binary_dir = PROJECT_BINARY_DIR;
+        std::ifstream request_file(PathToJsonFiles(binary_dir) + "/requests.json");
         nlohmann::json request_info;
         request_file >> request_info;
         std::vector<std::string> all_requests;
@@ -73,15 +76,16 @@ public:
         return all_requests;
     }
 
-    void putAnswers(std::vector<std::vector<RelativeIndex>> answers){
+    static void putAnswers(std::vector<std::vector<RelativeIndex>> answers){
         nlohmann::json json_file;
-        std::ofstream answers_file1(PathToJsonFiles(PROJECT_BINARY_DIR) + "/answers.json");
+        std::string binary_dir = PROJECT_BINARY_DIR;
+        std::ofstream answers_file1(PathToJsonFiles(binary_dir) + "/answers.json");
         for(int i = 0; i < answers.size();i++){
             std::string i_str = std::to_string(i);
             i_str = std::string(3 - i_str.length(), '0') + i_str;
-            if(answers[i].size() ==0){
+            if(answers[i].empty()){
                 json_file["answers"]["request" + i_str]["result"] = "false";
-            }else if(answers[i].size() ==0){
+            }else if(answers[i].empty()){
                 json_file["answers"]["request" + i_str]["result"] = "true";
                 json_file["answers"]["request" + i_str]["docid"] = answers[i][0].doc_id;
                 json_file["answers"]["request" + i_str]["rank"] = answers[i][0].rank;
@@ -116,7 +120,7 @@ public:
 
 
     InvertedIndex() = default;
-    void UpdateDocumentBase(std::vector<std::string> input_docs){
+    void UpdateDocumentBase(const std::vector<std::string>& input_docs){
         docs.clear();
         for(auto& i : input_docs){
             docs.push_back(i);
@@ -171,7 +175,7 @@ public:
 
 class SearchServer{
 public:
-    SearchServer(InvertedIndex& idx) : _index(idx){};
+    explicit SearchServer(InvertedIndex& idx) : _index(idx){};
 
     std::vector<std::vector<RelativeIndex>> search(const std::vector<std::string>& queries_input) {
         std::vector<std::vector<RelativeIndex>> result;
@@ -218,10 +222,10 @@ public:
 
                 int count =1;
                 int max_responses = ConverterJSON::GetResponsesLimit();
-                int max_count=all_find[0].count;
+                int max_count= all_find[0].count;
 
-                for(auto& i : all_find){
-                    if(i.count>max_count) max_count = i.count;
+                for(auto& j : all_find){
+                    if(j.count>max_count) max_count = j.count;
                 }
 
                 for(auto& j : all_find){
