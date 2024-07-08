@@ -18,10 +18,13 @@ add_subdirectory("nlohmann json")
 
 set(JSON_BuildTests OFF CACHE INTERNAL "")
 
-add_executable(search_engine main.cpp
+add_executable(search_engine src/main.cpp
         include/SearchServer.h
         include/JsonConverter.h
-        include/InvertedIndex.h)
+        include/InvertedIndex.h
+        src/SearchServer.cpp
+        src/InvertedIndex.cpp
+        src/JsonConverter.cpp)
 
 target_link_libraries(search_engine PRIVATE nlohmann_json::nlohmann_json)
 
