@@ -1,13 +1,12 @@
 #include "../include/JsonConverter.h"
-
+#include <iostream>
 bool RelativeIndex::operator==(const RelativeIndex &other) const {
     return (doc_id == other.doc_id && rank == other.rank);
 }
 
 std::vector<std::string> ConverterJSON::GetTextDocuments() {
     nlohmann::json config_info;
-    std::string binary_dir = PROJECT_BINARY_DIR;
-    std::ifstream config_file(PathToJsonFiles(binary_dir) + "/config.json");
+    std::ifstream config_file("../JsonFiles/config.json");
     config_file >> config_info;
     std::vector<std::string> all_values;
     for (std::string i : config_info["files"]) {
@@ -31,17 +30,19 @@ std::vector<std::string> ConverterJSON::GetTextDocuments() {
 }
 
 int ConverterJSON::GetResponsesLimit() {
-    std::string binary_dir = PROJECT_BINARY_DIR;
-    std::ifstream config_file(PathToJsonFiles(binary_dir) + "/config.json");
-    nlohmann::json config_info;
-    config_file >> config_info;
-    int max_responses = config_info["config"]["max_responses"];
-    return max_responses;
+
+    std::ifstream config_file("../JsonFiles/config.json");
+    if(config_file.is_open()) {
+        nlohmann::json config_info;
+        config_file >> config_info;
+        int max_responses = config_info["config"]["max_responses"];
+        return max_responses;
+    }
+    return 5;
 }
 
 std::vector<std::string> ConverterJSON::GetRequests() {
-    std::string binary_dir = PROJECT_BINARY_DIR;
-    std::ifstream request_file(PathToJsonFiles(binary_dir) + "/requests.json");
+    std::ifstream request_file("../JsonFiles/requests.json");
     nlohmann::json request_info;
     request_file >> request_info;
     std::vector<std::string> all_requests;
@@ -53,8 +54,7 @@ std::vector<std::string> ConverterJSON::GetRequests() {
 
 void ConverterJSON::putAnswers(std::vector<std::vector<RelativeIndex>> answers) {
     nlohmann::json json_file;
-    std::string binary_dir = PROJECT_BINARY_DIR;
-    std::ofstream answers_file1(PathToJsonFiles(binary_dir) + "/answers.json");
+    std::ofstream answers_file1("../JsonFiles/answers.json");
     for(int i = 0; i < answers.size();i++){
         std::string i_str = std::to_string(i);
         i_str = std::string(3 - i_str.length(), '0') + i_str;

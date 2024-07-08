@@ -45,10 +45,9 @@ void check(std::string path_to_config){
 int main() {
     auto start = std::chrono::high_resolution_clock::now();
 
-    std::string binary_dir = PROJECT_BINARY_DIR;
-    std::string config_file_path = PathToJsonFiles(binary_dir) + "/config.json";
+
     try{
-        check(config_file_path);
+        check("../JsonFiles/config.json");
     }
     catch (std::runtime_error ex){
         std::cerr << ex.what() << std::endl;
