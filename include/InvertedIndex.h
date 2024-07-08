@@ -1,11 +1,11 @@
 #pragma once
-
+#include <strstream>
 #include <vector>
 #include <iostream>
 #include <map>
 #include <thread>
 #include <mutex>
-
+#include <sstream>
 
 struct Entry{
     size_t doc_id, count;

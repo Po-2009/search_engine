@@ -43,7 +43,6 @@ void check(std::string path_to_config){
 }
 
 int main() {
-    auto start = std::chrono::high_resolution_clock::now();
 
 
     try{
@@ -53,13 +52,6 @@ int main() {
         std::cerr << ex.what() << std::endl;
         std::exit(EXIT_FAILURE);
     }
-
-    auto end = std::chrono::high_resolution_clock::now();
-
-    std::chrono::duration<double> duration = end - start;
-
-    // Выводим длительность в секундах
-    std::cout << "Время выполнения: " << duration.count() << " секунд" << std::endl;
 
 
 
