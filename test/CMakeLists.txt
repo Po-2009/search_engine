@@ -3,7 +3,11 @@ project(MyProject)
 
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/googletest" "googletest")
 
-add_executable(all_tests all_tests.cpp)
+add_executable(all_tests all_tests.cpp
+                    ../src/InvertedIndex.cpp
+                    ../src/JsonConverter.cpp
+                    ../src/SearchServer.cpp
+)
 
 target_include_directories(all_tests PRIVATE
         ${GTEST_INCLUDE_DIRS}

@@ -26,7 +26,7 @@ void InvertedIndex::UpdateDocumentBase(const std::vector<std::string> &input_doc
 void InvertedIndex::ProcessDocument(const std::string &word, const std::string &doc, size_t doc_id, std::mutex &mtx,
                                     std::vector<Entry> &all) {
     std::vector<Entry> result;
-    std::istringstream ss(doc);
+    std::stringstream ss(doc);
     std::string one_word;
     size_t count = 0;
     while (ss >> one_word) {

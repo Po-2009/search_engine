@@ -43,6 +43,8 @@ void check(std::string path_to_config){
 }
 
 int main() {
+    auto start = std::chrono::high_resolution_clock::now();
+
     std::string binary_dir = PROJECT_BINARY_DIR;
     std::string config_file_path = PathToJsonFiles(binary_dir) + "/config.json";
     try{
@@ -52,6 +54,13 @@ int main() {
         std::cerr << ex.what() << std::endl;
         std::exit(EXIT_FAILURE);
     }
+
+    auto end = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration<double> duration = end - start;
+
+    // Выводим длительность в секундах
+    std::cout << "Время выполнения: " << duration.count() << " секунд" << std::endl;
 
 
 
