@@ -20,10 +20,10 @@ public:
 
 
     InvertedIndex() = default;
-    void UpdateDocumentBase(const std::vector<std::string>& input_docs);
+    void UpdateDocumentBase(const std::vector<std::string>& input_docs) noexcept;
 
-    static void ProcessDocument(const std::string& word, const std::string& doc, size_t doc_id, std::mutex& mtx, std::vector<Entry>& all);
+    static void ProcessDocument(const std::string& word, const std::string& doc, size_t doc_id, std::mutex& mtx, std::vector<Entry>& all) noexcept;
 
-    std::vector<Entry> GetWordCount(const std::string& word);
+    std::vector<Entry> GetWordCount(const std::string& word) noexcept;
 
 };

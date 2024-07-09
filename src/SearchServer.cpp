@@ -1,7 +1,7 @@
 #include "../include/SearchServer.h"
 
 
-std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<std::string> &queries_input) {
+std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<std::string> &queries_input) noexcept{
     std::vector<std::vector<RelativeIndex>> result;
     for (auto &i: queries_input) {
         std::vector<Entry> document_entrys;

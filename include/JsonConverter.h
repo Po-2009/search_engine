@@ -18,9 +18,9 @@ public:
 
     static std::vector<std::string> GetTextDocuments();
 
-    static int GetResponsesLimit();
+    static int GetResponsesLimit() noexcept;
 
-    static std::vector<std::string> GetRequests();
+    static std::vector<std::string> GetRequests() noexcept;
 
-    static void putAnswers(std::vector<std::vector<RelativeIndex>> answers);
+    static void putAnswers(std::vector<std::vector<RelativeIndex>> answers) noexcept;
 };

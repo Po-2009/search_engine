@@ -29,7 +29,7 @@ std::vector<std::string> ConverterJSON::GetTextDocuments() {
     return all_values;
 }
 
-int ConverterJSON::GetResponsesLimit() {
+int ConverterJSON::GetResponsesLimit() noexcept{
 
     std::ifstream config_file("../JsonFiles/config.json");
     if(config_file.is_open()) {
@@ -41,7 +41,7 @@ int ConverterJSON::GetResponsesLimit() {
     return 5;
 }
 
-std::vector<std::string> ConverterJSON::GetRequests() {
+std::vector<std::string> ConverterJSON::GetRequests() noexcept {
     std::ifstream request_file("../JsonFiles/requests.json");
     nlohmann::json request_info;
     request_file >> request_info;
@@ -52,7 +52,7 @@ std::vector<std::string> ConverterJSON::GetRequests() {
     return all_requests;
 }
 
-void ConverterJSON::putAnswers(std::vector<std::vector<RelativeIndex>> answers) {
+void ConverterJSON::putAnswers(std::vector<std::vector<RelativeIndex>> answers) noexcept{
     nlohmann::json json_file;
     std::ofstream answers_file1("../JsonFiles/answers.json");
     for(int i = 0; i < answers.size();i++){

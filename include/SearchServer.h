@@ -13,7 +13,7 @@ class SearchServer{
 public:
     explicit SearchServer(InvertedIndex& idx) : _index(idx){};
 
-    std::vector<std::vector<RelativeIndex>> search(const std::vector<std::string>& queries_input);
+    std::vector<std::vector<RelativeIndex>> search(const std::vector<std::string>& queries_input) noexcept;
 private:
     InvertedIndex& _index;
 };

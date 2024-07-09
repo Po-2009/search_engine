@@ -6,7 +6,7 @@ bool Entry::operator==(const Entry &other) const {
 }
 
 
-void InvertedIndex::UpdateDocumentBase(const std::vector<std::string> &input_docs) {
+void InvertedIndex::UpdateDocumentBase(const std::vector<std::string> &input_docs) noexcept {
     docs.clear();
     for(auto& i : input_docs){
         docs.push_back(i);
@@ -24,7 +24,7 @@ void InvertedIndex::UpdateDocumentBase(const std::vector<std::string> &input_doc
 }
 
 void InvertedIndex::ProcessDocument(const std::string &word, const std::string &doc, size_t doc_id, std::mutex &mtx,
-                                    std::vector<Entry> &all) {
+                                    std::vector<Entry> &all) noexcept {
     std::vector<Entry> result;
     std::stringstream ss(doc);
     std::string one_word;
@@ -41,7 +41,7 @@ void InvertedIndex::ProcessDocument(const std::string &word, const std::string &
 }
 
 
-std::vector<Entry> InvertedIndex::GetWordCount(const std::string &word) {
+std::vector<Entry> InvertedIndex::GetWordCount(const std::string &word) noexcept {
     std::vector<Entry> all;
     std::mutex mtx;
 
