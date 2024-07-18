@@ -31,7 +31,7 @@ void TestInvertedIndexFunctionality(
     ASSERT_EQ(result, expected);
 }
 
-TEST(TestCaseInvertedIndex, TestBasic)  {
+TEST(TestCaseInvertedIndex, TestBasic)   {
 
 const vector<string> docs = {
 
