@@ -55,5 +55,9 @@ std::vector<Entry> InvertedIndex::GetWordCount(const std::string &word) noexcept
         thread.join();
     }
 
+    std::sort(all.begin(),all.end(), [](const Entry& a1, const Entry& a2){
+        return a1.doc_id < a2.doc_id;
+    });
+
     return all;
 }
