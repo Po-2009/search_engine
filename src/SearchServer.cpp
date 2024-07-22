@@ -58,6 +58,12 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
                 count++;
             }
 
+            for(auto& d: document_relative_index){
+                std::cout << d.doc_id << " " << d.rank << "\n";
+            }
+            std::cout <<"\n";
+
+
             std::sort(document_relative_index.begin(), document_relative_index.end(),[](const RelativeIndex& a_1, const RelativeIndex& a_2){
                 return a_1.doc_id < a_2.doc_id;
             });
@@ -66,9 +72,14 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
                 return a_1.rank > a_2.rank;
             });
 
+            for(auto& d: document_relative_index){
+                std::cout << d.doc_id << " " << d.rank << "\n";
+            }
+            std::cout << "\n" << "\n";
+
 
             if (document_relative_index.size() > max_responses){
-                document_relative_index.erase(document_relative_index.begin()+5, document_relative_index.end());
+                document_relative_index.erase(document_relative_index.begin()+max_responses, document_relative_index.end());
             }
             
             result.push_back(document_relative_index);
