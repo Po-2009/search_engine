@@ -54,28 +54,17 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
 
             for(auto& j : all_find){
                 float rank = (float) j.count / (float) max_count;
-                document_relative_index.push_back({j.doc_id, rank});
+                RelativeIndex relativeIndex;
+                relativeIndex.doc_id = j.doc_id;
+                relativeIndex.rank = rank;
+                document_relative_index.push_back(relativeIndex);
                 count++;
             }
 
-            for(auto& d: document_relative_index){
-                std::cout << d.doc_id << " " << d.rank << "\n";
-            }
-            std::cout <<"\n";
-
-
-            std::sort(document_relative_index.begin(), document_relative_index.end(),[](const RelativeIndex& a_1, const RelativeIndex& a_2){
-                return a_1.doc_id < a_2.doc_id;
-            });
 
             std::sort(document_relative_index.begin(), document_relative_index.end(),[](const RelativeIndex& a_1, const RelativeIndex& a_2){
                 return a_1.rank > a_2.rank;
             });
-
-            for(auto& d: document_relative_index){
-                std::cout << d.doc_id << " " << d.rank << "\n";
-            }
-            std::cout << "\n" << "\n";
 
 
             if (document_relative_index.size() > max_responses){

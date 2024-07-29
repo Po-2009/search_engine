@@ -52,8 +52,5 @@ int main() {
         std::cerr << ex.what() << std::endl;
         std::exit(EXIT_FAILURE);
     }
-
-
-
     return 0;
 }
