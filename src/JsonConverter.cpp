@@ -54,26 +54,28 @@ std::vector<std::string> ConverterJSON::GetRequests() noexcept {
 
 void ConverterJSON::putAnswers(std::vector<std::vector<RelativeIndex>> answers) noexcept{
     nlohmann::json json_file;
-    std::ofstream answers_file1("../JsonFiles/answers.json");
-    for(int i = 0; i < answers.size();i++){
+    std::ofstream answers_file("../JsonFiles/answers.json");
+
+    for (int i = 0; i < answers.size(); i++) {
         std::string i_str = std::to_string(i);
         i_str = std::string(3 - i_str.length(), '0') + i_str;
-        if(answers[i].empty()){
+
+        if (answers[i].empty()) {
             json_file["answers"]["request" + i_str]["result"] = "false";
-        }else if(answers[i].empty()){
+        } else if (answers[i].size() == 1) {
             json_file["answers"]["request" + i_str]["result"] = "true";
             json_file["answers"]["request" + i_str]["docid"] = answers[i][0].doc_id;
-            json_file["answers"]["request" + i_str]["rank"] = answers[i][0].rank;
-        }else{
-            for(auto& j : answers[i]) {
-                std::pair<std::pair<std::string, int>,std::pair<std::string, float>> all;
-                all.first = {"docid", j.doc_id};
-                all.second.first = "rank";
-                all.second.second = std::round(j.rank * 1000.0) / 1000.0;
-                json_file["answers"]["request" + i_str]["result"] = "true";
-                json_file["answers"]["request" + i_str]["relevance"].emplace_back(all);
+            json_file["answers"]["request" + i_str]["rank"] = std::round(answers[i][0].rank * 1000.0) / 1000.0;
+        } else {
+            json_file["answers"]["request" + i_str]["result"] = "true";
+            for (auto& j : answers[i]) {
+                nlohmann::json relevance_entry;
+                relevance_entry["docid"] = j.doc_id;
+                relevance_entry["rank"] = std::round(j.rank * 1000.0) / 1000.0;
+                json_file["answers"]["request" + i_str]["relevance"].push_back(relevance_entry);
             }
         }
     }
-    answers_file1 << json_file;
+    answers_file << json_file.dump(4);
+    answers_file.close();
 }
