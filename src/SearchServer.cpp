@@ -3,9 +3,11 @@
 
 std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<std::string> &queries_input) noexcept{
     std::vector<std::vector<RelativeIndex>> result;
+
     for (auto &i: queries_input) {
         std::vector<Entry> document_entrys;
-        std::vector<int> documents_number;
+        std::set<int> document_number;
+
         std::stringstream ss(i);
         std::string one_word;
         int words_count =0;
@@ -15,7 +17,7 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
             bool check = false;
             for (auto &j: _index.freq_dictionary[one_word]) {
                 check = true;
-                documents_number.push_back(j.doc_id);
+                document_number.insert(j.doc_id);
                 document_entrys.push_back(j);
             }
             if (!check) {
@@ -30,9 +32,8 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
             std::vector<RelativeIndex> document_relative_index;
             std::vector<Entry> all_find;
 
-            std::set<int> set(documents_number.begin(), documents_number.end());
             int find_summ =0;
-            for(int j : set){
+            for(int j : document_number){
                 for(auto& g : document_entrys){
                     if(g.doc_id == j){
                         find_summ += g.count;
@@ -43,8 +44,6 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
                 all_find.push_back({t_j, t_summ});
                 find_summ = 0;
             }
-
-            int count =1;
             int max_responses = ConverterJSON::GetResponsesLimit();
             int max_count= all_find[0].count;
 
@@ -58,7 +57,6 @@ std::vector<std::vector<RelativeIndex>> SearchServer::search(const std::vector<s
                 relativeIndex.doc_id = j.doc_id;
                 relativeIndex.rank = rank;
                 document_relative_index.push_back(relativeIndex);
-                count++;
             }
 
 

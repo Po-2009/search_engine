@@ -35,8 +35,11 @@ void InvertedIndex::ProcessDocument(const std::string &word, const std::string &
         }
     }
     if (count > 0) {
+        Entry new_entry;
+        new_entry.doc_id = doc_id;
+        new_entry.count = count;
         std::lock_guard<std::mutex> lock(mtx);
-        all.push_back({doc_id, count});
+        all.push_back(new_entry);
     }
 }
 
