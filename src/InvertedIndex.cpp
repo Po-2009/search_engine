@@ -16,9 +16,11 @@ void InvertedIndex::UpdateDocumentBase(const std::vector<std::string> &input_doc
         std::stringstream v(i);
         std::string word;
         while(v >> word) {
-            std::vector<Entry> c = GetWordCount(word);
-            std::pair<std::string, std::vector<Entry>> pair = {word, c};
-            freq_dictionary.insert(pair);
+            if(freq_dictionary.find(word) == freq_dictionary.end()) {
+                std::vector<Entry> wordCount = GetWordCount(word);
+                std::pair<std::string, std::vector<Entry>> pair = {word, wordCount};
+                freq_dictionary.insert(pair);
+            }
         }
     }
 }
@@ -35,11 +37,12 @@ void InvertedIndex::ProcessDocument(const std::string &word, const std::string &
         }
     }
     if (count > 0) {
-        Entry new_entry;
-        new_entry.doc_id = doc_id;
-        new_entry.count = count;
+        auto* new_entry = new Entry;
+        new_entry->doc_id = doc_id;
+        new_entry->count = count;
         std::lock_guard<std::mutex> lock(mtx);
-        all.push_back(new_entry);
+        all.push_back(*new_entry);
+        delete new_entry;
     }
 }
 
@@ -49,6 +52,7 @@ std::vector<Entry> InvertedIndex::GetWordCount(const std::string &word) noexcept
     std::mutex mtx;
 
     std::vector<std::thread> threads;
+    threads.reserve(docs.size());
 
     for (size_t i = 0; i < docs.size(); ++i) {
         threads.emplace_back(ProcessDocument, word, docs[i], i, std::ref(mtx), std::ref(all));

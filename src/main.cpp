@@ -1,31 +1,28 @@
 #include "../include/SearchServer.h"
-#include "../include/InvertedIndex.h"
-#include "../include/JsonConverter.h"
 #include <iostream>
 #include <cstdlib>
 
 void process(){
-    ConverterJSON convert;
     InvertedIndex idx;
     SearchServer searchServer(idx);
 
     try{
-        convert.GetTextDocuments();
+        ConverterJSON::GetTextDocuments();
     }
-    catch (std::runtime_error ex){
+    catch (std::runtime_error& ex){
         std::cerr << ex.what() << std::endl;
         std::exit(EXIT_FAILURE);
     }
-    std::vector<std::string> doc = convert.GetTextDocuments();
+    std::vector<std::string> doc = ConverterJSON::GetTextDocuments();
 
-    std::vector<std::string> requests = convert.GetRequests();
+    std::vector<std::string> requests = ConverterJSON::GetRequests();
 
     idx.UpdateDocumentBase(doc);
 
-    convert.putAnswers(searchServer.search(requests));
+    ConverterJSON::putAnswers(searchServer.search(requests));
 }
 
-void check(std::string path_to_config){
+void check(std::string& path_to_config){
 
     std::ifstream config(path_to_config);
     if(!config.is_open()){
@@ -46,9 +43,10 @@ int main() {
 
 
     try{
-        check("../JsonFiles/config.json");
+        std::string path = "../JsonFiles/config.json";
+        check(path);
     }
-    catch (std::runtime_error ex){
+    catch (std::runtime_error& ex){
         std::cerr << ex.what() << std::endl;
         std::exit(EXIT_FAILURE);
     }

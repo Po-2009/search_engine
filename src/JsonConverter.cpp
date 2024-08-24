@@ -57,8 +57,7 @@ void ConverterJSON::putAnswers(std::vector<std::vector<RelativeIndex>> answers) 
     std::ofstream answers_file("../JsonFiles/answers.json");
 
     for (int i = 0; i < answers.size(); i++) {
-        std::string i_str = std::to_string(i);
-        i_str = std::string(3 - i_str.length(), '0') + i_str;
+        std::string i_str = std::string(3 - std::to_string(i).length(), '0') + std::to_string(i);
 
         if (answers[i].empty()) {
             json_file["answers"]["request" + i_str]["result"] = "false";
